@@ -22,6 +22,13 @@ export const Container = styled.section`
     @media (max-width: 768px) {
       font-size: 3rem;
     }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #86C540, #5DC2D1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
   }
 
   p {
@@ -47,28 +54,32 @@ export const Container = styled.section`
 
   .primary-button {
     padding: 0.75rem 2rem;
-    background: #111827;
+    background: linear-gradient(135deg, #86C540, #5DC2D1);
     color: white;
     font-weight: 500;
     border-radius: 0.375rem;
-    transition: background 0.3s;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(134, 197, 64, 0.2);
 
     &:hover {
-      background: #1f2937;
+      background: linear-gradient(135deg, #76B530, #4DB2C1);
+      box-shadow: 0 6px 12px rgba(134, 197, 64, 0.3);
+      transform: translateY(-2px);
     }
   }
 
   .secondary-button {
     padding: 0.75rem 2rem;
-    border: 1px solid #d1d5db;
-    color: #111827;
+    border: 2px solid #86C540;
+    color: #86C540;
     font-weight: 500;
     border-radius: 0.375rem;
     transition: all 0.3s;
 
     &:hover {
-      border-color: #9ca3af;
-      background: #f9fafb;
+      background: #86C540;
+      color: white;
+      transform: translateY(-2px);
     }
   }
 `;

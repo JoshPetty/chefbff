@@ -6,11 +6,10 @@ export function Hero() {
     <Container>
       <div className="hero-content">
         <h1>
-          Make Food<br />
-          Make Friends
+          <span className="gradient-text">The Home Cook's Best Friend</span>
         </h1>
         <p>
-          A Community of Home Chefs
+         Family made app
         </p>
         <div className="cta-buttons">
           <Link href="/recipes" className="primary-button">

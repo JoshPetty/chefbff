@@ -5,10 +5,10 @@ import styled from "styled-components";
 export const Container = styled.div`
   .recipe-link {
     display: block;
-    transition: opacity 0.3s;
+    transition: transform 0.3s;
 
     &:hover {
-      opacity: 0.85;
+      transform: translateY(-4px);
     }
   }
 
@@ -18,6 +18,12 @@ export const Container = styled.div`
     border-radius: 0.5rem;
     background: #f3f4f6;
     aspect-ratio: 4 / 3;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+
+    .recipe-link:hover & {
+      border-color: #86C540;
+    }
   }
 
   .recipe-image {
@@ -37,11 +43,11 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    background: linear-gradient(135deg, #86C540, #5DC2D1);
 
     .emoji {
       font-size: 4rem;
-      opacity: 0.4;
+      opacity: 0.6;
     }
   }
 
@@ -51,10 +57,10 @@ export const Container = styled.div`
       font-weight: 600;
       color: #111827;
       margin-bottom: 0.5rem;
-      transition: opacity 0.3s;
+      transition: color 0.3s;
 
       .recipe-link:hover & {
-        opacity: 0.7;
+        color: #86C540;
       }
     }
 
@@ -70,7 +76,8 @@ export const Container = styled.div`
 
     .recipe-meta {
       font-size: 0.875rem;
-      color: #6b7280;
+      color: #5DC2D1;
+      font-weight: 500;
     }
   }
 `;

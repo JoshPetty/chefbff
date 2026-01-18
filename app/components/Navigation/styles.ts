@@ -11,15 +11,38 @@ export const Container = styled.nav`
   z-index: 50;
 
   .logo {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    transition: opacity 0.3s;
-    z-index: 51;
-    
-    &:hover {
-      opacity: 0.8;
-    }
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s;
+  z-index: 51;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  border-radius: 1rem;
+  
+  &:hover {
+    background: rgba(134, 197, 64, 0.05);
+    transform: translateX(2px);
+  }
+
+  img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+  }
+
+  &:hover img {
+    box-shadow: 0 6px 16px rgba(134, 197, 64, 0.3);
+    transform: rotate(-5deg);
+  }
+
+  span {
+    font-size: 1.75rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #86C540, #5DC2D1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
 
     span {
       font-size: 1.25rem;
@@ -39,24 +62,25 @@ export const Container = styled.nav`
       transition: color 0.3s;
 
       &:hover {
-        color: #111827;
+        color: #86C540; /* Logo green */
       }
 
       &.active {
-        color: #111827;
-        border-bottom: 2px solid #111827;
+        color: #86C540; /* Logo green */
+        border-bottom: 2px solid #86C540;
         padding-bottom: 0.25rem;
       }
 
       &.button {
         padding: 0.5rem 1.5rem;
-        background: #111827;
+        background: linear-gradient(135deg, #86C540, #5DC2D1); /* Green to blue gradient */
         color: white;
         border-radius: 0.375rem;
         border-bottom: none;
         
         &:hover {
-          background: #1f2937;
+          background: linear-gradient(135deg, #76B530, #4DB2C1);
+          color: white;
         }
       }
     }
@@ -110,6 +134,7 @@ export const Container = styled.nav`
       &::before {
         transform: rotate(45deg);
         top: 50%;
+        background: #86C540;
       }
 
       span {
@@ -119,6 +144,7 @@ export const Container = styled.nav`
       &::after {
         transform: rotate(-45deg);
         bottom: 50%;
+        background: #86C540;
       }
     }
   }
@@ -149,12 +175,12 @@ export const Container = styled.nav`
         transition: color 0.3s;
 
         &:hover {
-          color: #111827;
+          color: #86C540;
         }
 
         &.button {
           padding: 0.75rem 2rem;
-          background: #111827;
+          background: linear-gradient(135deg, #86C540, #5DC2D1);
           color: white;
           border-radius: 0.375rem;
           font-size: 1.25rem;

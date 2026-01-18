@@ -35,12 +35,13 @@ export const Container = styled.section`
     }
 
     .view-all {
-      color: #111827;
-      font-weight: 500;
-      transition: opacity 0.3s;
+      color: #86C540;
+      font-weight: 600;
+      transition: all 0.3s;
 
       &:hover {
-        opacity: 0.7;
+        color: #5DC2D1;
+        transform: translateX(4px);
       }
     }
   }

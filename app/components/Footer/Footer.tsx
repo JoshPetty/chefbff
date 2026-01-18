@@ -16,7 +16,6 @@ export function Footer() {
             />
             <span>ChefBFF</span>
           </div>
-          <p>© 2026 ChefBFF. All rights reserved.</p>
         </div>
       </div>
     </Container>

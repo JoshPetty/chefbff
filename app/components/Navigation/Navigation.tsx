@@ -2,19 +2,29 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Container } from "./styles";
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const closeMenu = () => setIsMenuOpen(false);
   const isActive = (path: string) => pathname === path;
 
   return (
-    <Container>
+    <Container className={isScrolled ? 'scrolled' : ''}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -50,6 +60,13 @@ export function Navigation() {
               Recipes
             </Link>
             <Link 
+              href="/recipe-helper" 
+              onClick={closeMenu}
+              className={isActive('/recipe-helper') ? 'active' : ''}
+            >
+              Recipe Helper
+            </Link>
+            <Link 
               href="/recipes/new"
               onClick={closeMenu}
               className="button"
@@ -74,6 +91,7 @@ export function Navigation() {
           <div className="mobile-menu">
             <Link href="/" onClick={closeMenu}>Home</Link>
             <Link href="/recipes" onClick={closeMenu}>Recipes</Link>
+            <Link href="/recipe-helper" onClick={closeMenu}>Recipe Helper</Link>
             <Link href="/recipes/new" onClick={closeMenu} className="button">Add Recipe</Link>
           </div>
         </div>

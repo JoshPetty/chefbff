@@ -21,7 +21,7 @@ export function FeaturedRecipes({ recipes }: FeaturedRecipesProps) {
     <Container>
       <div className="featured-header">
         <div>
-          <h2>Featured Recipes</h2>
+          <h2>Available Recipes</h2>
           <p>Handpicked from our community</p>
         </div>
         <Link href="/recipes" className="view-all">
