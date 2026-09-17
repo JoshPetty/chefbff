@@ -46,6 +46,33 @@ Vercel Deployment: [ChefBFF](https://chefbff.vercel.app/)
 
 ---
 
+## Project Structure
+
+```
+chefbff/
+├── frontend/     # Next.js app (App Router), Supabase client, UI
+├── backend/      # FastAPI service for Pantry-to-Plate matching (TF-IDF / cosine similarity)
+└── data/         # Shared recipe dataset used by backend/matcher.py
+```
+
+### Development
+
+```bash
+# Frontend
+cd frontend
+npm install
+npm run dev
+
+# Backend
+cd backend
+pip install -r requirements.txt
+python main.py
+```
+
+**Note:** this repo is deployed on Vercel with the project root directory set to `frontend/`.
+
+---
+
 
 ## Database Schema
 

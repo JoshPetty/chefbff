@@ -19,7 +19,7 @@ export default function RecipeHelperPage() {
               color: '#111827',
               marginBottom: '0.5rem'
             }}>
-               Pantry to Plate
+               What's in my Pantry? Find Recipes with ChefBFF!
             </h1>
             <p style={{ fontSize: '1.25rem', color: '#6b7280' }}>
               Tell us what ingredients you have, and we'll suggest delicious recipes you can make!
